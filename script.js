@@ -14,8 +14,11 @@ const ctx = canvas.getContext("2d");
 // Draw a circle
 
 let size = 10;
+let isPressed = false;
 colorEl.value = "black";
 let color = colorEl.value;
+let x;
+let y;
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 function drawCircle(x, y) {
