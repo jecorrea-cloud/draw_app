@@ -18,3 +18,13 @@ body {
 canvas {
   border: 2px solid steelblue;
 }
+
+/* Tool box */
+
+.toolbox {
+  background-color: steelblue;
+  border: 1px solid slateblue;
+  display: flex;
+  width: 804px;
+  padding: 1rem;
+}
