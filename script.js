@@ -26,16 +26,31 @@ canvas.addEventListener("mousedown", (e) => {
   x = e.offsetX;
   y = e.offsetY;
 
-  console.log(isPressed, x, y);
+  //   console.log(isPressed, x, y);
 });
 
-canvas.addEventListener("mouseup", (e) => {
+canvas.addEventListener("mousemove", (e) => {
+  if (isPressed) {
+    const x2 = e.offsetX;
+    const y2 = e.offsetY;
+
+    // console.log(x2, y2);
+
+    drawCircle(x2, y2);
+    drawLine(x, y, x2, y2);
+
+    x = x2;
+    y = y2;
+  }
+});
+
+document.addEventListener("mouseup", (e) => {
   isPressed = false;
 
   x = undefined;
   y = undefined;
 
-  console.log(isPressed, x, y);
+  //   console.log(isPressed, x, y);
 });
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
