@@ -74,5 +74,6 @@ function drawLine(x1, y1, x2, y2) {
   ctx.stroke();
 }
 
-drawCircle(100, 200);
-drawLine(300, 300, 200, 500);
+// Color input funtionality
+
+colorEl.addEventListener("change", (e) => (color = e.target.value));
