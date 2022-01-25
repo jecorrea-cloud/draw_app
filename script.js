@@ -20,7 +20,27 @@ let color = colorEl.value;
 let x;
 let y;
 
+canvas.addEventListener("mousedown", (e) => {
+  isPressed = true;
+
+  x = e.offsetX;
+  y = e.offsetY;
+
+  console.log(isPressed, x, y);
+});
+
+canvas.addEventListener("mouseup", (e) => {
+  isPressed = false;
+
+  x = undefined;
+  y = undefined;
+
+  console.log(isPressed, x, y);
+});
+
 // https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
+
+// Draw a circle
 function drawCircle(x, y) {
   ctx.beginPath();
   ctx.arc(x, y, size, 0, Math.PI * 2);
